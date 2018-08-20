@@ -35,7 +35,7 @@ def gethint(line):
             continue
         else:
             if re.findall('[一-龥A-Za-z0-9. ]+',item):
-                if len(item)==1 or item == '.' or item ==' ': continue
+                if len(item)==1 or item == '.' or item ==' ' or len(set(re.findall('.',item))) == 1: continue
                 if len(afterjieba) < 500:
                     afterjieba.append(item)
                 else:
